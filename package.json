@@ -1,0 +1,22 @@
+{
+  "name": "einstein8",
+  "version": "1.0.0",
+  "description": "Compound Interest Calculator and Graph",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkaplin/Einstein8.git"
+  },
+  "author": "Joseph Kaplin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkaplin/Einstein8/issues"
+  },
+  "homepage": "https://github.com/jkaplin/Einstein8#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
