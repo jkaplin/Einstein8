@@ -4,7 +4,7 @@
   "description": "Compound Interest Calculator and Graph",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/jkaplin/Einstein8#readme",
   "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }

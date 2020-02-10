@@ -1,27 +1,5 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-/* 
-// Random number from 1 - 10
-const numberToGuess = Math.floor(Math.random() * 10) + 1;
-// This variable is used to determine if the app should continue prompting the user for input
-let foundCorrectNumber = false;
-
-while (!foundCorrectNumber) {
-  // Get user input
-  let guess = prompt("Guess a number from 1 to 10: ");
-  // Convert the string input to a number
-  guess = Number(guess);
-
-  // Compare the guess to the secret answer and let the user know.
-  if (guess === numberToGuess) {
-    console.log("Congrats, you got it!");
-    foundCorrectNumber = true;
-  } else {
-    console.log("Sorry, guess again!");
-  }
-}
-*/
-
 function displayTime(time) {
   const number = Number(time.slice(0, -1));
   const char = time[time.length - 1];
@@ -75,8 +53,10 @@ const totalDays = numberOfDays(totalTime);
 const growth = 1 + growthRate / 100;
 let money = initialInvestment;
 
+let rows = [];
 let day = 0;
 while (day < totalDays) {
+  rows.push([day, money]);
   console.log(day, money);
   if (day + frameDays >= totalDays) {
     const daysLeft = totalDays - day;
@@ -87,3 +67,6 @@ while (day < totalDays) {
   day += frameDays;
 }
 console.log(totalDays, money);
+rows.push([day, money]);
+
+module.exports = rows;
