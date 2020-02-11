@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/jkaplin/Einstein8#readme",
   "dependencies": {
+    "config": "^3.2.5",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "mongoose": "^5.8.11",
     "prompt-sync": "^4.2.0"
   },
   "devDependencies": {

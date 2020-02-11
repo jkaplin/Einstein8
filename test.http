@@ -1,0 +1,44 @@
+
+@host = http://localhost:8000/api
+@graph = {{host}}/graph
+
+@initial = 6000
+@timeFrame = 7
+@contribution = 0
+@growth = 5
+@totalTime = 365
+
+// Users and Auth
+
+### Create Graph
+POST {{graph}}
+Content-Type: application/json
+
+{
+    "initialInvestment": "{{initial}}",
+    "timeFrame": "{{timeFrame}}",
+    "contribution": "{{contribution}}",
+    "growth": "{{growth}}",
+    "totalTime": "{{totalTime}}"
+}
+
+### Get all graphs
+# @name all
+GET {{graph}}
+Content-Type: application/json
+
+{
+    "name": "{{name}}",
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
+
+### Get specefic graph
+GET {{graph}}/{{all.response.body.0._id}}
+Content-Type: application/json
+
+{
+    "name": "{{name}}",
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
